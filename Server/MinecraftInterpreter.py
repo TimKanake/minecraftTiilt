@@ -2,7 +2,7 @@ import en_core_web_sm # Windows
 # import spacy # macOS
 
 from GameCommand import GameCommand
-from SynonymDictionaries import commands_dict, supported_commands
+from SynonymDictionaries import supported_commands
 import json
 import socket
 
