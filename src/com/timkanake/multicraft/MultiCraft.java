@@ -29,6 +29,5 @@ public class MultiCraft extends JavaPlugin{
 	@Override
 	public void onDisable() {
 		getLogger().info("MultiCraft has been disabled");
-	}
-	
+	}	
 }

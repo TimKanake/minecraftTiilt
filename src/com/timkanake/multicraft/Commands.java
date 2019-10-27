@@ -2,7 +2,6 @@ package com.timkanake.multicraft;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -10,12 +9,10 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
 public class Commands {	
-	
 	public static boolean undo(Player p, MultiCraft plugin) {
 		PreviousBuildsData pData = PreviousBuildsData.getInstance();
 		BuildCommandData playerBuildRecord = new BuildCommandData();
-		
-		// get the player's build record
+
 		try {
 			playerBuildRecord = pData.getPlayersBuildRecordForUndo(p);
 		}catch(NoCommandHistoryException e) {
