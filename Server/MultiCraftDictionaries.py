@@ -35,7 +35,6 @@ def get_word_synonyms(word):
 
 
 # Required Dictionaries
-commands_dict = get_word_synonyms_as_dict(supported_commands)
 directions_dict = get_word_synonyms_as_dict(directions)
 
 materials_dict = {

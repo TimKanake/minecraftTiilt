@@ -19,11 +19,11 @@ TRANSCRIPTS_QUEUE = Queue(maxsize=30)
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 44100
-HOST = "10.0.0.223"
-PORT = 5001
+HOST = input("Please enter the host address: ")
+PORT = input("Please enter the port number: ")
 
 client_socket = socket.socket()
-CLIENT_NAME = "dbbfcee1-4f09-44c2-b877-528bebe5d55f" # input("Please enter your screen name: ")
+CLIENT_NAME = input("Please enter your screen name: ")
 
 # Create an instance of AudioSource
 audio_source = AudioSource(q, True, True)
@@ -84,6 +84,9 @@ def pyaudio_callback(in_data, frame_count, time_info, status):
     return (None, pyaudio.paContinue)
 
 def main():
+    # TOGGLE COMMENTS ON THE CODE BELOW TO USE A MICROPHONE AS AN INPUT SOURCE:
+
+
     # # instantiate pyaudio
     # audio = pyaudio.PyAudio()
 
@@ -113,9 +116,12 @@ def main():
     #     stream.close()
     #     audio.terminate()
     
+
+    # IF USING VOICE, COMMENT THIS OUT
+    
     while True:
-        input_s = input("Please enter a message to send: ")
-        client_socket.send((CLIENT_NAME + " " + input_s).encode())
+        input_str = input("Please enter a message to send: ")
+        client_socket.send((CLIENT_NAME + " " + input_str).encode())
 
 def tiilt_main():
     client_socket.connect((HOST, PORT))

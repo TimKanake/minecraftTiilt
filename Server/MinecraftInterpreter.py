@@ -2,12 +2,14 @@ import en_core_web_sm # Windows
 # import spacy # macOS
 
 from GameCommand import GameCommand
-from SynonymDictionaries import commands_dict, supported_commands
+from SynonymDictionaries import supported_commands
 import json
 import socket
 
 nlp = en_core_web_sm.load() # windows
 #nlp = spacy.load("en_core_web_sm") # macOS
+
+
 def get_supported_word(word, synonyms_dict):
 	return synonyms_dict[word]
 
@@ -43,6 +45,7 @@ def create_json(game_command):
 	return command_json
 
 
+# FOR TESTING
 if __name__ == "__main__":
 	while True:
 		input_s = input("Please enter a message to interprete: ")

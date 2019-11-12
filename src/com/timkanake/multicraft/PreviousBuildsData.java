@@ -50,7 +50,6 @@ public class PreviousBuildsData {
 		try {
 			CustomUndoStack tempStack = buildsUndoData.get(p);
 			temp = tempStack.pop();
-//			temp = instance.buildsUndoData.get(p).pop();
 		}catch(NoCommandHistoryException e) {
 			throw e;
 		}
