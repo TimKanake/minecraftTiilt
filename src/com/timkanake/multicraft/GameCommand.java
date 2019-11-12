@@ -11,8 +11,9 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import com.timkanake.multicraft.PyramidBuilder.BlockVector3;
+
 import com.timkanake.multicraft.PyramidBuilder;
+import com.timkanake.multicraft.PyramidBuilder.BlockVector3;
 
 
 /*
